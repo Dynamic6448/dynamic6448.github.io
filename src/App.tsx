@@ -4,7 +4,7 @@ import { Experience } from './components/Experience';
 
 const App: Component = () => {
     return (
-        <div class='bg-slate-100'>
+        <div class=''>
             <Header />
             <Experience />
         </div>
