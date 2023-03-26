@@ -1,10 +1,10 @@
-import type { Component } from 'solid-js';
+import React from 'react';
 import { Header } from './components/Header';
 import { Experience } from './components/Experience';
 
-const App: Component = () => {
+const App: React.FC = () => {
     return (
-        <div class=''>
+        <div className=''>
             <Header />
             <Experience />
         </div>
