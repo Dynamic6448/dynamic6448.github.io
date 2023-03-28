@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Experience: React.FC = () => {
     return (
-        <div className='flex flex-col px-20'>
-            <p className='text-7xl text-sky-500 py-10'>Experience</p>
+        <div className='flex flex-col px-8 sm:px-10 md:px-20'>
+            <p className='text-5xl sm:text-7xl text-sky-500 py-10'>Experience</p>
             <ExperienceElement
                 position='Project Manager & Lead Avionics Developer'
                 place='Digital Flight Dynamics'
@@ -32,17 +32,17 @@ interface ExperienceElementProps {
 const ExperienceElement: React.FC<ExperienceElementProps> = ({ position, place, link, start, end = 'Present', tools, children }) => {
     return (
         <div className='flex flex-col pb-10 gap-1'>
-            <div className='flex flex-row text-2xl'>
+            <div className='flex flex-col md:flex-row text-xl sm:text-2xl'>
                 <p className='pr-5 text-gray-200'>{position}</p>
                 <a className='text-pink-700 hover:underline' href={link} target='_blank'>
                     @ {place}
                 </a>
             </div>
-            <p className='text-gray-300 text-xl'>
+            <p className='text-gray-300 text-lg sm:text-xl'>
                 {start} {'->'} {end}
             </p>
-            <p className='text-lg text-slate-400 pb-1'>{children}</p>
-            <div className='flex flex-row gap-4'>
+            <p className='text-md sm:text-lg text-slate-400 pb-1'>{children}</p>
+            <div className='flex flex-row flex-wrap gap-4'>
                 {tools.map((tool) => (
                     <Tool>{tool}</Tool>
                 ))}
@@ -54,5 +54,9 @@ interface ToolProps {
     children: React.ReactNode;
 }
 const Tool: React.FC<ToolProps> = ({ children }) => {
-    return <div className='flex justify-center items-center bg-gray-700 bg-opacity-50 border-2 border-gray-600 border-opacity-50 rounded-full px-5 py-1 text-gray-200 text-lg'>{children}</div>;
+    return (
+        <div className='flex justify-center items-center bg-gray-700 bg-opacity-50 border-2 border-gray-600 border-opacity-50 rounded-full px-5 py-1 text-gray-200 text-sm sm:text-lg'>
+            {children}
+        </div>
+    );
 };
