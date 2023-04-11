@@ -1,7 +1,7 @@
 import React from 'react';
-import { Header } from './pages/Header';
-import { Projects } from './pages/Projects';
-import { Experience } from './pages/Experience';
+import { Header } from './sections/Header';
+import { Projects } from './sections/Projects';
+import { Experience } from './sections/Experience';
 
 const App: React.FC = () => {
     return (

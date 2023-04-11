@@ -35,7 +35,11 @@ const Project: React.FC<ProjectProps> = ({ name, tools, img, children }) => {
                     ))}
                 </div>
             </div>
-            <img className='rounded-3xl sm:w-3/4 xl:w-auto xl:h-[400px]' src={img} />
+            <div className='rounded-3xl sm:w-3/4 xl:w-auto xl:h-[400px] overflow-hidden'>
+                <a href='https://github.com/Digital-Flight-Dynamics' target='_blank'>
+                    <img className='w-full h-full object-cover cursor-pointer transition ease-in-out duration-700 hover:scale-105 hover:saturate-[1.25]' src={img} />
+                </a>
+            </div>
         </div>
     );
 };
