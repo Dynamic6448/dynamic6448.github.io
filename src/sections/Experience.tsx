@@ -11,9 +11,13 @@ export const Experience: React.FC = () => {
                 link='https://github.com/Digital-Flight-Dynamics'
                 start='February 2021'
                 tools={['TypeScript', 'React', 'MSFS SDK']}
-            />
+            >
+                a
+            </ExperienceElement>
 
-            <ExperienceElement position='Programmer' place='Texas Torque (FRC 1477)' link='https://texastorque.org' start='January 2023' tools={['Java']} />
+            <ExperienceElement position='Programmer' place='Texas Torque (FRC 1477)' link='https://texastorque.org' start='January 2023' tools={['Java']}>
+                a
+            </ExperienceElement>
         </>
     );
 };
@@ -24,8 +28,9 @@ interface ExperienceElementProps {
     start: string;
     end?: string;
     tools: string[];
+    children: React.ReactNode;
 }
-const ExperienceElement: React.FC<ExperienceElementProps> = ({ position, place, link, start, end = 'Present', tools }) => {
+const ExperienceElement: React.FC<ExperienceElementProps> = ({ position, place, link, start, end = 'Present', tools, children }) => {
     return (
         <div className='flex flex-col pb-10 gap-1'>
             <div className='flex flex-col md:flex-row text-xl sm:text-2xl'>
@@ -37,6 +42,9 @@ const ExperienceElement: React.FC<ExperienceElementProps> = ({ position, place, 
             <p className='text-gray-300 text-lg sm:text-xl'>
                 {start} {'-'} {end}
             </p>
+
+            <p className='text-md sm:text-lg text-slate-400'>{children}</p>
+
             <div className='flex flex-row flex-wrap gap-4'>
                 {tools.map((tool) => (
                     <Tool>{tool}</Tool>

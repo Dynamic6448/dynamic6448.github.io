@@ -9,7 +9,8 @@ const App: React.FC = () => {
             <Header />
             <div className='bg-black bg-opacity-75 flex flex-col px-8 sm:px-10 md:px-20'>
                 <Projects />
-                <Experience />
+                {/* <Experience /> */}
+                <div className='h-20' />
             </div>
         </div>
     );
