@@ -13,12 +13,27 @@ export const Projects: React.FC = () => {
                     img='a350.png'
                     link='https://www.youtube.com/@dfdsim'
                 >
-                    An FOSS organization developing a high-fidelity Airbus A350 addon for Microsoft Flight Simulator. As
-                    the founder, project manager, and lead avionics developer, I provide technical motivation and
-                    support to team members, and I play a critical role in creating cockpit displays that provide
-                    virtual pilots with vital information necessary for efficient flights. I also review and test code
-                    written by other members of the team, ensuring it meets our rigorous quality standards and providing
-                    feedback to help them hone their skills.
+                    <p>
+                        I built and led a dedicated team of volunteer 3D artists and software developers to create a
+                        free and open-source virtual Airbus A350 replica for Microsoft Flight Simulator. The project's
+                        goal is to deliver a highly realistic and immersive flying experience, all for free to the MSFS
+                        community.
+                    </p>
+                    <p>
+                        As a part of bringing the A350X simulation to life, I have written and optimized over 40,000
+                        lines of frontend and backend code. The frontend consists of the avionics displays present in
+                        the flight deck, made to have pixel-perfect accuracy in comparison to their real counterparts,
+                        using React and SVG. The majority of the backend code is written in Rust, and it's where we
+                        simulate core aircraft systems, such as the electrical, hydraulic, and pneumatic systems just to
+                        name a few.
+                    </p>
+                    <p>
+                        Ensuring optimal performance in the simulator for the end user is another core focus of ours. To
+                        achieve this, we constantly go back to profile and fine-tune our code as development goes on,
+                        making sure everything works as expected on a wide range of hardware configurations. This
+                        involves identifying bottlenecks in both the avionics and systems simulations, such as limiting
+                        the refresh rate of certain elements in the displays.
+                    </p>
                 </Project>
                 <Project
                     name='Smart Clock'
