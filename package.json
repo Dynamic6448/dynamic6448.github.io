@@ -2,7 +2,7 @@
     "name": "personal-website",
     "version": "1.0.0",
     "description": "",
-    "homepage": "https://dynamic6448.github.io/personal-website/",
+    "homepage": "https://dynamic6448.github.io/",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
