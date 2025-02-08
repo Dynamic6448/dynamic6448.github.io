@@ -108,7 +108,6 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
                                                 ? 'border-emerald-500 bg-emerald-500'
                                                 : 'border-slate-600 group-hover:border-emerald-500 bg-slate-600'
                                         }`}
-                                        style={{ top: `${circlePosition}%` }}
                                     />
                                 </div>
                             );
