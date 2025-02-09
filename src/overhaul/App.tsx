@@ -9,7 +9,6 @@ const App: React.FC = () => {
 
     return (
         <div className='min-h-screen bg-gradient-to-b from-slate-900 to-slate-800'>
-            {/* <Navbar activeSection={activeSection} setActiveSection={setActiveSection} /> */}
             <FlightPathNavbar
                 sections={[
                     { name: '', ref: startRef },

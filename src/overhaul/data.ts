@@ -20,7 +20,11 @@ export const projects: Project[] = [
         imgTitle: 'a350x',
         date: 'Aug 2020 - Present',
         technologies: ['React', 'Rust', 'MSFS SDK', 'MongoDB'],
-        description: '',
+        description:
+            'I built and led a team of software developers and 3D artists to develop a free and open-source airliner add-on for ' +
+            'Microsoft Flight Simulator. As the lead software developer, I primarily build high-fidelity avionics using React with ' +
+            'pixel-perfect accuracy. I also develop core aircraft systems using Rust, including electrical, hydraulics, and air ' +
+            'conditioning.',
         links: [
             { link: 'https://github.com/Digital-Flight-Dynamics', type: ProjectLinkType.GITHUB },
             { link: 'https://youtube.com/@dfdsim', type: ProjectLinkType.YOUTUBE },
