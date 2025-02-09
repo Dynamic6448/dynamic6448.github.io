@@ -89,13 +89,13 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
     return (
         <nav className='fixed right-0 top-0 h-full flex items-center pr-4 select-none z-50'>
             <div
-                className='h-5/6 flex justify-end rounded-[2rem] bg-black bg-opacity-50 px-4 py-8'
+                className='transition-all duration-300 ease-in-out h-5/6 flex justify-end rounded-[2rem] bg-black bg-opacity-50 px-4 py-8'
                 onMouseEnter={() => setIsNavHovered(true)}
                 onMouseLeave={() => setIsNavHovered(false)}
-                // For mobile
                 style={{
-                    width: isNavHovered ? `${Math.max(...sections.map((section) => section.name.length)) * 17}px` : '',
-                    transition: 'width 0.3s ease-in-out',
+                    width: isNavHovered
+                        ? `${Math.max(...sections.map((section) => section.name.length)) * 17}px`
+                        : '4rem',
                 }}
             >
                 <div className='relative w-8 h-full' ref={trackContainerRef}>
@@ -133,11 +133,11 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
                                 <div className='flex flex-row items-center justify-end space-x-4 -translate-y-1/2'>
                                     {/* Label */}
                                     <p
-                                        className={`text-lg transition-colors ${
+                                        className={`text-lg transition-all duration-300 ease-in-out ${
                                             isScrolledPast ? 'text-white' : 'text-gray-400 group-hover:text-white'
-                                        }`}
+                                        } ${!isNavHovered && 'text-opacity-0'}`}
                                     >
-                                        {isNavHovered ? section.name : ''}
+                                        {section.name}
                                     </p>
                                     {/* Circle */}
                                     <div
