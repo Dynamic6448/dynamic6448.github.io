@@ -1,20 +1,34 @@
-import React from 'react';
-import { Header } from './sections/Header';
-import { Projects } from './sections/Projects';
-// import { Experience } from './sections/Experience';
-import { Footer } from './sections/Footer';
+import React, { useRef } from 'react';
+import { FlightPathNavbar, Hero, Projects, Skills } from './sections';
 
 const App: React.FC = () => {
-    return (
-        <div className='w-full h-full'>
-            <Header />
-            <div className='bg-black bg-opacity-75 flex flex-col px-8 sm:px-10 md:px-20'>
-                <Projects />
-                {/* <Experience /> */}
-                <div className='h-10' />
+    const startRef = useRef(null);
+    const skillsRef = useRef(null);
+    const projectsRef = useRef(null);
+    const endRef = useRef(null);
 
-                <Footer />
-            </div>
+    return (
+        <div className='min-h-screen bg-gradient-to-b from-slate-900 to-slate-800'>
+            <FlightPathNavbar
+                sections={[
+                    { name: '', ref: startRef },
+                    { name: 'Skills', ref: skillsRef },
+                    { name: 'Projects', ref: projectsRef },
+                    { name: '', ref: endRef },
+                ]}
+            />
+
+            <section ref={startRef}>
+                <Hero />
+            </section>
+            <section ref={skillsRef}>
+                <Skills />
+            </section>
+            <section ref={projectsRef}>
+                <Projects />
+            </section>
+
+            <div ref={endRef} />
         </div>
     );
 };
