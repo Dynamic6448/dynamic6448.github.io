@@ -34,9 +34,9 @@ export const projects: Project[] = [
         technologies: ['React', 'TailwindCSS', 'Python', 'Flask', 'SQLite'],
         description:
             "An enhanced in-flight entertainment system created for TAMUHack 2025's American Airlines challenge. Our project, " +
-            'completed in just 24 hours, features a food ordering menu, a flight attendant panel powered by Python and Flask for ' +
-            'handling orders, and it even has built-in games like Chess and Pac-Man. The system also includes real-time flight ' +
-            'information, which is stored and managed in an SQLite database, among other data. ',
+            'completed in just 24 hours, features a food ordering menu, a flight attendant mobile app for handling orders, and it ' +
+            'even has built-in games like Chess and Pac-Man. The system also includes real-time flight information, which is stored ' +
+            'and managed in an SQLite database, among other data. ',
         links: [
             { link: 'https://github.com/Dynamic6448/tamuhack-2025', type: ProjectLinkType.GITHUB },
             {

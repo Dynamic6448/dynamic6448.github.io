@@ -133,7 +133,7 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
                                 <div className='flex flex-row items-center justify-end space-x-4 -translate-y-1/2'>
                                     {/* Label */}
                                     <p
-                                        className={`text-lg transition-all duration-300 ease-in-out ${
+                                        className={`text-lg transition-all duration-200 ease-in-out ${
                                             isScrolledPast ? 'text-white' : 'text-gray-400 group-hover:text-white'
                                         } ${!isNavHovered && 'text-opacity-0'}`}
                                     >
@@ -141,7 +141,7 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
                                     </p>
                                     {/* Circle */}
                                     <div
-                                        className={`w-4 h-4 aspect-square rounded-full border-[4px] group-hover:scale-125 transition-all duration-100 ${
+                                        className={`w-4 h-4 aspect-square rounded-full border-[4px] group-hover:scale-125 transition-all duration-200 ease-in-out ${
                                             isScrolledPast
                                                 ? 'border-emerald-500 bg-emerald-500'
                                                 : 'border-slate-600 group-hover:border-emerald-500 bg-slate-600'
