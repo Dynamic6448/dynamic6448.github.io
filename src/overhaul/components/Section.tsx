@@ -6,7 +6,7 @@ interface SectionProps {
 }
 
 export const Section: React.FC<SectionProps> = ({ title, children }) => (
-    <div className='px-16 lg:px-24 py-16 md:py-24'>
+    <div className='pl-4 pr-24 xl:px-24 py-16 md:py-24'>
         <div className='max-w-6xl mx-auto'>
             <h2 className='text-3xl md:text-4xl font-bold text-slate-100 mb-10'>{title}</h2>
             {children}

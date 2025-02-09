@@ -31,7 +31,7 @@ export const projects: Project[] = [
         title: 'SkyLounge',
         imgTitle: 'skylounge',
         date: 'Jan 2025',
-        technologies: ['React', 'TailwindCSS', 'SQLite'],
+        technologies: ['React', 'TailwindCSS', 'Python', 'Flask', 'SQLite'],
         description:
             "An enhanced in-flight entertainment system created for TAMUHack 2025's American Airlines challenge. Our project, " +
             'completed in just 24 hours, features a food ordering menu, a flight attendant panel powered by Python and Flask for ' +

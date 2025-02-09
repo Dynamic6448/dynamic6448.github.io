@@ -123,7 +123,7 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
 
                         return (
                             <a
-                                key={section.name}
+                                key={i}
                                 className='absolute left-1/2 right-0 -translate-x-1/2 group cursor-pointer'
                                 onClick={() => {
                                     section.ref.current?.scrollIntoView({ behavior: 'smooth' });
