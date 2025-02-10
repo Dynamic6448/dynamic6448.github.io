@@ -15,9 +15,10 @@ export const Hero: React.FC = () => (
                 Fawwaz Memon
             </p>
             <p className='text-md sm:text-lg md:text-xl text-center text-slate-400 w-5/6 md:w-1/2 xl:w-1/3'>
-                I am a Computer Science student at Texas A&M University. I am the Founder and lead software developer at
-                Digital Flight Dynamics, building open-source software. My interests lie in everything from software
-                engineering and aviation to cooking.
+                I am a Computer Science student at{' '}
+                <span className='text-slate-300 font-semibold'>Texas A&M University</span>. I am the Founder and Lead
+                Software Developer at Digital Flight Dynamics, building open-source software. My interests lie in
+                everything from software engineering and aviation to cooking.
             </p>
             <div className='flex flex-row justify-center items-center space-x-3 sm:space-x-10 pt-2'>
                 {/* Resume button */}
