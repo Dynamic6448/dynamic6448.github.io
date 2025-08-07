@@ -75,21 +75,28 @@ export const projects: Project[] = [
 
 export const skills = {
     languages: [
+        { name: 'C', img: 'c' },
         { name: 'C++', img: 'cpp' },
-        { name: 'Rust', img: 'rust' },
         { name: 'C#', img: 'csharp' },
         { name: 'Java', img: 'java' },
         { name: 'Python', img: 'python' },
+        { name: 'JavaScript', img: 'javascript' },
         { name: 'TypeScript', img: 'typescript' },
+        { name: 'Rust', img: 'rust' },
         { name: 'HTML', img: 'html' },
         { name: 'CSS', img: 'css' },
     ],
-    frameworks: [
+    technologies: [
+        { name: 'Node.js', img: 'nodejs' },
+        { name: 'Express', img: 'express' },
         { name: 'React', img: 'react' },
         { name: 'TailwindCSS', img: 'tailwindcss' },
-        { name: 'Tauri', img: 'tauri' },
         { name: 'Electron', img: 'electron' },
+        { name: 'Tauri', img: 'tauri' },
         { name: 'Firebase', img: 'firebase' },
         { name: 'MongoDB', img: 'mongodb' },
+        { name: '.NET', img: 'dotnet' },
+        { name: 'Unity3D', img: 'unity' },
+        { name: 'TensorFlow', img: 'tensorflow' },
     ],
 };

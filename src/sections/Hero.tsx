@@ -17,14 +17,13 @@ export const Hero: React.FC = () => (
             <p className='text-md sm:text-lg md:text-xl text-center text-slate-400 w-5/6 md:w-1/2 xl:w-1/3'>
                 I am a Computer Science student at{' '}
                 <span className='text-slate-300 font-semibold'>Texas A&M University</span>. I am the Founder and Lead
-                Software Developer at Digital Flight Dynamics, building open-source software. My interests lie in
-                everything from software engineering and aviation to cooking.
+                Software Developer at Digital Flight Dynamics, building open-source software for flight simulators.
             </p>
             <div className='flex flex-row justify-center items-center space-x-3 sm:space-x-10 pt-2'>
                 {/* Resume button */}
                 <a
                     className='w-32 h-10 sm:w-44 sm:h-14 rounded-full text-sky-400 hover:text-black border-2 border-sky-400 hover:bg-sky-400 flex items-center justify-center cursor-pointer transition duration-300 select-none'
-                    href='Resume.pdf'
+                    href='Fawwaz_Memon_resume.pdf'
                     target='_blank'
                     rel='noopener noreferrer'
                 >
