@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<Project> = ({ title, imgTitle, date, technolo
     }, [links]);
 
     return (
-        <div className='bg-slate-800 p-8 rounded-2xl transition-all duration-300 h-full border border-slate-700 relative overflow-hidden'>
+        <div className='bg-slate-800 p-8 rounded-2xl transition-all duration-300 h-full border border-slate-700 relative overflow-hidden flex flex-col'>
             <div className='mb-6 select-none'>
                 <img src={`projects/${imgTitle}.png`} alt={`${title} preview`} className='w-full rounded-lg' />
             </div>
@@ -49,14 +49,10 @@ export const ProjectCard: React.FC<Project> = ({ title, imgTitle, date, technolo
                 ))}
             </div>
 
-            <p className='text-slate-400'>{description}</p>
+            <p className='text-slate-400 flex-grow'>{description}</p>
 
-            {/* Overlay for hovered icon buttons */}
-            <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300'>
-                <div className='w-full h-full flex items-center justify-center gap-4 opacity-0 hover:opacity-100 transition-opacity duration-300'>
-                    {iconLinkElements}
-                </div>
-            </div>
+            {/* Bottom action bar */}
+            <div className='flex justify-center gap-4 mt-6 pt-6 border-t border-slate-600'>{iconLinkElements}</div>
         </div>
     );
 };
