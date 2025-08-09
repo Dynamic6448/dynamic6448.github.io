@@ -7,7 +7,7 @@ export const Skills: React.FC = () => (
         <div className='flex flex-col'>
             {Object.entries(skills).map(([category, items]) => (
                 <div key={category} className='space-y-4 py-2'>
-                    <h3 className='text-xl font-semibold text-slate-200 capitalize'>{category}</h3>
+                    <h3 className='text-xl font-semibold text-sky-theme-300 capitalize'>{category}</h3>
                     <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2'>
                         {items.map((item) => (
                             <TechnologyIcon key={item.name} name={item.name} imgTitle={item.img} />

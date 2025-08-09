@@ -31,10 +31,11 @@
 }
 
 body {
-    background-color: #0f172a;
-    /* slate-900 */
-    color: #cbd5e1;
-    /* slate-300 */
+    background: linear-gradient(135deg, #000000 0%, #0f172a 30%, #1e293b 60%, #000000 100%);
+    background-attachment: fixed;
+    color: #87ceeb;
+    /* sky-blue */
+    min-height: 100vh;
 }
 
 @keyframes scale {
@@ -55,4 +56,54 @@ body {
     100% {
         transform: scale(1);
     }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Custom utility classes */
+.shimmer {
+    background: linear-gradient(90deg, 
+        transparent 25%, 
+        rgba(56, 189, 248, 0.2) 50%, 
+        transparent 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+.glow-sky {
+    animation: glow 3s ease-in-out infinite;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Fix for IconLink hover state to prevent interference from parent group hover */
+.icon-link-item:hover .icon-mask {
+    background-color: #000000 !important;
 }

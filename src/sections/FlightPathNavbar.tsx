@@ -89,7 +89,7 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
     return (
         <nav className='fixed right-0 top-0 h-full flex items-center pr-4 select-none z-50'>
             <div
-                className='transition-all duration-300 ease-in-out h-5/6 flex justify-end rounded-[2rem] bg-black bg-opacity-50 px-4 py-8'
+                className='transition-all duration-300 ease-in-out h-5/6 flex justify-end rounded-[2rem] bg-black-theme-950/60 backdrop-blur-sm px-4 py-8 border border-sky-theme-800/40'
                 onMouseEnter={() => setIsNavHovered(true)}
                 onMouseLeave={() => setIsNavHovered(false)}
                 style={{
@@ -100,9 +100,9 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
             >
                 <div className='relative w-8 h-full' ref={trackContainerRef}>
                     {/* Progress line */}
-                    <div className='absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-slate-600'>
+                    <div className='absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-sky-theme-800/40 rounded-full'>
                         <div
-                            className='absolute top-0 bg-emerald-500 w-full'
+                            className='absolute top-0 bg-sky-theme-400 w-full rounded-full'
                             style={{ height: `${scrollProgress}%` }}
                         />
                     </div>
@@ -134,17 +134,19 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
                                     {/* Label */}
                                     <p
                                         className={`text-lg transition-all duration-200 ease-in-out ${
-                                            isScrolledPast ? 'text-white' : 'text-gray-400 group-hover:text-white'
+                                            isScrolledPast
+                                                ? 'text-sky-theme-200'
+                                                : 'text-sky-theme-400 group-hover:text-sky-theme-200'
                                         } ${!isNavHovered && 'text-opacity-0'}`}
                                     >
                                         {section.name}
                                     </p>
                                     {/* Circle */}
                                     <div
-                                        className={`w-4 h-4 aspect-square rounded-full border-[4px] group-hover:scale-125 transition-all duration-200 ease-in-out ${
+                                        className={`w-4 h-4 aspect-square rounded-full border-[3px] group-hover:scale-125 transition-all duration-200 ease-in-out ${
                                             isScrolledPast
-                                                ? 'border-emerald-500 bg-emerald-500'
-                                                : 'border-slate-600 group-hover:border-emerald-500 bg-slate-600'
+                                                ? 'border-sky-theme-400 bg-sky-theme-400'
+                                                : 'border-sky-theme-900 group-hover:border-sky-theme-400 bg-sky-theme-900'
                                         }`}
                                     />
                                 </div>
@@ -153,7 +155,7 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
                     })}
                     {/* Airplane Icon */}
                     <div
-                        className='absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 cursor-grab active:cursor-grabbing'
+                        className='absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 cursor-grab active:cursor-grabbing opacity-80 hover:opacity-100 transition-opacity'
                         style={{ top: `${scrollProgress}%` }}
                         onMouseDown={handleMouseDown}
                     >

@@ -8,27 +8,32 @@ const App: React.FC = () => {
     const endRef = useRef(null);
 
     return (
-        <div className='min-h-screen bg-gradient-to-b from-slate-900 to-slate-800'>
-            <FlightPathNavbar
-                sections={[
-                    { name: '', ref: startRef },
-                    { name: 'Skills', ref: skillsRef },
-                    { name: 'Projects', ref: projectsRef },
-                    { name: '', ref: endRef },
-                ]}
-            />
+        <div className='min-h-screen bg-gradient-sky relative'>
+            {/* Additional overlay gradient for depth */}
+            <div className='absolute inset-0 bg-gradient-to-br from-transparent via-sky-theme-900/20 to-black-theme-950/40 pointer-events-none'></div>
 
-            <section ref={startRef}>
-                <Hero />
-            </section>
-            <section ref={skillsRef}>
-                <Skills />
-            </section>
-            <section ref={projectsRef}>
-                <Projects />
-            </section>
+            <div className='relative z-10'>
+                <FlightPathNavbar
+                    sections={[
+                        { name: '', ref: startRef },
+                        { name: 'Skills', ref: skillsRef },
+                        { name: 'Projects', ref: projectsRef },
+                        { name: '', ref: endRef },
+                    ]}
+                />
 
-            <div ref={endRef} />
+                <section ref={startRef}>
+                    <Hero />
+                </section>
+                <section ref={skillsRef}>
+                    <Skills />
+                </section>
+                <section ref={projectsRef}>
+                    <Projects />
+                </section>
+
+                <div ref={endRef} />
+            </div>
         </div>
     );
 };
