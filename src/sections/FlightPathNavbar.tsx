@@ -155,7 +155,7 @@ export const FlightPathNavbar: React.FC<FlightPathNavbarProps> = ({ sections }) 
                     })}
                     {/* Airplane Icon */}
                     <div
-                        className='absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 cursor-grab active:cursor-grabbing opacity-80 hover:opacity-100 transition-opacity'
+                        className='absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 cursor-grab active:cursor-grabbing'
                         style={{ top: `${scrollProgress}%` }}
                         onMouseDown={handleMouseDown}
                     >
